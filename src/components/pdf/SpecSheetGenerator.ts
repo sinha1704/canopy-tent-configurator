@@ -34,7 +34,7 @@ export async function exportManufacturingSpecSheetPDF({
   const margin = 14;
   let currentY = 16;
 
-  const orderRef = `MVP-${Date.now().toString(36).toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}`;
+  const orderRef = `APEX-${Date.now().toString(36).toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}`;
 
   // 1. Header Banner - Sleek Enterprise Navy Header
   doc.setFillColor(15, 23, 42); // Slate 900
@@ -47,7 +47,7 @@ export async function exportManufacturingSpecSheetPDF({
   doc.setTextColor(255, 255, 255);
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(13);
-  doc.text('MVP VISUALS • PRODUCTION CUT-SHEET & SPECIFICATION', margin + 7, currentY + 9);
+  doc.text('APEX PRO CANOPY • COMMERCIAL PRODUCTION SPECIFICATION', margin + 7, currentY + 9);
 
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(8);
@@ -281,7 +281,7 @@ export async function exportManufacturingSpecSheetPDF({
   doc.text('Pre-Press Operator: ____________________     Print QA Approved: [  ] YES   [  ] NO     Date: __________', margin + 38, footerY);
 
   doc.text(
-    'MVP Visuals Automated Production Spec Pipeline  •  Conforms to ISO 9001 Commercial Dye-Sublimation Guidelines',
+    'Apex Pro Automated Production Spec Pipeline  •  Conforms to ISO 9001 Commercial Dye-Sublimation Guidelines',
     margin,
     footerY + 5.5
   );
@@ -290,7 +290,7 @@ export async function exportManufacturingSpecSheetPDF({
   doc.text(`Ref: ${orderRef}`, pageWidth - margin - 35, footerY + 5.5);
 
   // Trigger browser file download
-  const fileName = `MVP_Canopy_SpecSheet_${orderRef}.pdf`;
+  const fileName = `Apex_Canopy_SpecSheet_${orderRef}.pdf`;
   try {
     doc.save(fileName);
   } catch {

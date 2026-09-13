@@ -24,7 +24,7 @@ export function Header() {
           <div>
             <div className="flex items-center gap-1.5 sm:gap-2">
               <span className="text-sm font-bold text-slate-900 dark:text-white tracking-tight">
-                MVP Visuals
+                Apex Pro Canopy
               </span>
               <span className="hidden sm:inline text-xs text-slate-400 dark:text-slate-500">•</span>
               <span className="hidden sm:inline text-xs font-medium text-slate-600 dark:text-slate-300">

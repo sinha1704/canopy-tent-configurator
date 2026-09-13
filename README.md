@@ -1,4 +1,4 @@
-# MVP Visuals • 3D + 2D Interactive Canopy Tent Configurator
+# Apex Pro Canopy • 3D + 2D Interactive Tent Configurator
 
 An enterprise-grade, production-ready 3D/2D custom canopy tent configurator engineered for high-concurrency e-commerce (Shopify / Headless Storefronts), dynamic print pricing, real-time WebGL synchronization, and vector manufacturing cut-sheet generation.
 

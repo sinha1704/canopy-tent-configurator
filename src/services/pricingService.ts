@@ -49,7 +49,7 @@ export class PricingService {
     if (params.hasRollerBag) accessoriesCost += ACCESSORY_PRICING.rollerBag;
     if (params.hasSandBags) accessoriesCost += ACCESSORY_PRICING.sandBags;
 
-    // MVP Visuals Custom Printing Rule:
+    // Commercial Dye-Sublimation Custom Printing Rule:
     // First 2 locations customized are included in base tent pricing.
     // Each additional peak or valance location incurs standard $35 print setup & sublimated ink fee.
     const freePrintsAllowed = 2;

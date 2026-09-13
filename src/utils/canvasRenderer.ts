@@ -96,6 +96,7 @@ export const ATLAS_MAPPING: Record<SurfaceId, UVAtlasBox> = {
 
 export class CanopyCanvasRenderer {
   private static imageCache: Map<string, HTMLImageElement> = new Map();
+  private static reusableTempCanvas: HTMLCanvasElement | null = null;
 
   /**
    * Preloads an image URL into cache to ensure smooth synchronous rendering to canvas
@@ -226,8 +227,11 @@ export class CanopyCanvasRenderer {
     ctx.fillStyle = baseCanopyColor;
     ctx.fillRect(0, 0, size, size);
 
-    // Create temporary offscreen buffer for rendering individual sections
-    const tempCanvas = document.createElement('canvas');
+    // Reusable offscreen buffer for rendering individual sections (zero GC allocation)
+    if (!this.reusableTempCanvas) {
+      this.reusableTempCanvas = document.createElement('canvas');
+    }
+    const tempCanvas = this.reusableTempCanvas;
 
     const surfaceEntries = Object.entries(surfaces) as [SurfaceId, SurfaceCustomization][];
 

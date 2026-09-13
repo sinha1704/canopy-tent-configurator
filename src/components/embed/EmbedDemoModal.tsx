@@ -1,20 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { ExternalLink, X, ShoppingCart } from 'lucide-react';
 import { useConfiguratorStore } from '../../store/useConfiguratorStore';
 import { useCartStore } from '../../store/useCartStore';
 
 export function EmbedDemoModal() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return window.location.hash === '#embed-demo' || window.location.search.includes('embed=true');
+    }
+    return false;
+  });
   const [logs, setLogs] = useState<string[]>([]);
   const tentSize = useConfiguratorStore((state) => state.tentSize);
   const frameType = useConfiguratorStore((state) => state.frameType);
   const cartItems = useCartStore((state) => state.cartItems);
-
-  useEffect(() => {
-    if (window.location.hash === '#embed-demo' || window.location.search.includes('embed=true')) {
-      setIsOpen(true);
-    }
-  }, []);
 
   const addLog = (msg: string) => {
     setLogs((prev) => [`[${new Date().toLocaleTimeString()}] ${msg}`, ...prev.slice(0, 19)]);

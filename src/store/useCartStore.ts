@@ -39,7 +39,7 @@ export const useCartStore = create<CartState>((set) => ({
     const sizeConfig = TENT_SIZES_CONFIG[cfg.tentSize];
     const customizedCount = cfg.getCustomizedSurfacesCount();
 
-    const refId = `APEX-CANOPY-${Date.now().toString(36).toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}`;
+    const refId = `SSS-CANOPY-${Date.now().toString(36).toUpperCase()}-${Math.floor(1000 + Math.random() * 9000)}`;
 
     const accessorySummary = [
       cfg.accessories.hasBackWall ? 'Back Wall' : null,
@@ -59,7 +59,7 @@ export const useCartStore = create<CartState>((set) => ({
 
     const newPayload: ShopifyCartPayload = {
       variantId,
-      sku: `APEX-TENT-${cfg.tentSize.replace('.', '')}-${cfg.frameType === 'hex_aluminum_pro' ? 'HEX' : 'STL'}`,
+      sku: `SSS-TENT-${cfg.tentSize.replace('.', '')}-${cfg.frameType === 'hex_aluminum_pro' ? 'HEX' : 'STL'}`,
       title: `${sizeConfig.label} Custom Printed Canopy Tent`,
       unitPrice: pricing.total,
       quantity: 1,
@@ -72,7 +72,7 @@ export const useCartStore = create<CartState>((set) => ({
         _preview_thumbnail_base64: thumbnailSnapshotBase64.substring(0, 120) + '...[truncated for header]',
         _manufacturing_ref_id: refId,
         _print_fee: `$${pricing.customPrintFee.toFixed(2)} (${pricing.printLocationsCount} printed surfaces)`,
-        _pdf_spec_url: `https://orders.apexprocanopy.com/specs/${refId}.pdf`
+        _pdf_spec_url: `https://orders.sssstudio.com/specs/${refId}.pdf`
       },
       pricingSnapshot: { ...pricing },
       surfacesSnapshot: JSON.parse(JSON.stringify(cfg.surfaces)),

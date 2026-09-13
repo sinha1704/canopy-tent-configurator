@@ -91,13 +91,13 @@ const createInitialSurfaces = (defaultColor = '#FFFFFF'): Record<SurfaceId, Surf
     textLayers: [
       {
         id: 'init-text-1',
-        text: 'YOUR BRAND',
+        text: 'SSS STUDIO',
         fontFamily: 'Montserrat',
-        fontSize: 50,
+        fontSize: 52,
         fillColor: '#0B2545',
         fontWeight: '900',
         fontStyle: 'normal',
-        letterSpacing: 2,
+        letterSpacing: 2.5,
         x: 0.5,
         y: 0.55,
         rotation: 0,
@@ -114,7 +114,7 @@ const createInitialSurfaces = (defaultColor = '#FFFFFF'): Record<SurfaceId, Surf
     textLayers: [
       {
         id: 'init-valance-text',
-        text: 'CUSTOM EVENT BRANDING • EXHIBIT & EXPO',
+        text: 'SSS STUDIO • CUSTOM EVENT CANOPIES & EXPO',
         fontFamily: 'Oswald',
         fontSize: 46,
         fillColor: '#FFFFFF',

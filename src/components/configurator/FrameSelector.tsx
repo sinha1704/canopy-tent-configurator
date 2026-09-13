@@ -7,7 +7,6 @@ export function FrameSelector() {
   const frameType = useConfiguratorStore((state) => state.frameType);
   const setFrameType = useConfiguratorStore((state) => state.setFrameType);
   const frameColor = useConfiguratorStore((state) => state.frameColor);
-  const setFrameColor = useConfiguratorStore.getState().setFrameColor;
 
   const frameColorPresets = [
     { name: 'Industrial White', hex: '#FFFFFF' },

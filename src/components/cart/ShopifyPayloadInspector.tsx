@@ -1,14 +1,12 @@
 import { useState } from 'react';
 import { useCartStore } from '../../store/useCartStore';
-import { useThemeStore } from '../../store/useThemeStore';
-import { X, Copy, Check, Terminal, ShoppingBag, Layers, ShieldCheck, FileJson, Sparkles } from 'lucide-react';
+import { X, Copy, Check, ShoppingBag, ShieldCheck } from 'lucide-react';
 
 export function ShopifyPayloadInspector() {
   const isPayloadInspectorOpen = useCartStore((state) => state.isPayloadInspectorOpen);
   const closePayloadInspector = useCartStore((state) => state.closePayloadInspector);
   const activePayload = useCartStore((state) => state.activePayload);
   const buildShopifyGraphQLMutation = useCartStore((state) => state.buildShopifyGraphQLMutation);
-  const theme = useThemeStore((state) => state.theme);
 
   const [activeTab, setActiveTab] = useState<'structured' | 'cart_js' | 'storefront_graphql'>('structured');
   const [copied, setCopied] = useState(false);

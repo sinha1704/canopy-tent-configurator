@@ -13,7 +13,6 @@ export function CanvasEditor() {
   const setSurfaceBackgroundColor = useConfiguratorStore(
     (state) => state.setSurfaceBackgroundColor
   );
-  const setAllSurfacesColor = useConfiguratorStore((state) => state.setAllSurfacesColor);
   const applyCanopyTheme = useConfiguratorStore((state) => state.applyCanopyTheme);
   const clearSurface = useConfiguratorStore((state) => state.clearSurface);
 

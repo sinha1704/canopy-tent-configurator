@@ -91,9 +91,9 @@ const createInitialSurfaces = (defaultColor = '#FFFFFF'): Record<SurfaceId, Surf
     textLayers: [
       {
         id: 'init-text-1',
-        text: 'MVP VISUALS',
+        text: 'YOUR BRAND',
         fontFamily: 'Montserrat',
-        fontSize: 52,
+        fontSize: 50,
         fillColor: '#0B2545',
         fontWeight: '900',
         fontStyle: 'normal',
@@ -114,13 +114,13 @@ const createInitialSurfaces = (defaultColor = '#FFFFFF'): Record<SurfaceId, Surf
     textLayers: [
       {
         id: 'init-valance-text',
-        text: 'PREMIUM CUSTOM EVENT BRANDING • EST. 2006',
+        text: 'CUSTOM EVENT BRANDING • EXHIBIT & EXPO',
         fontFamily: 'Oswald',
-        fontSize: 48,
+        fontSize: 46,
         fillColor: '#FFFFFF',
         fontWeight: 'bold',
         fontStyle: 'normal',
-        letterSpacing: 3,
+        letterSpacing: 2.5,
         x: 0.5,
         y: 0.5,
         rotation: 0,
